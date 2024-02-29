@@ -3,12 +3,22 @@
 namespace candy
 {
     
-    int Strlen(const char *s); // It returns the string's length.
+    int Strlen(const char *s); 
+    // It returns the string's length.
+
     int Strnlen(const char *s, int maxlen);
-    ;                                           // It returns the specified value if the value specified is less than the string length, otherwise the string length.
-    int Strcmp(const char *s1, const char *s2); // It compares two strings and returns 0 if the strings are the same.
-    int Strncmp(const char *s1, const char *s2,int maxlen);//It compares two strings only to n characters.
-    char* Strcat( char *destination, const char *source);//It concatenates two strings and returns the concatenated string.
+    ;                                           
+    // It returns the specified value if the value specified is less than the string length, otherwise the string length.
+    
+    int Strcmp(const char *s1, const char *s2); 
+    // It compares two strings and returns 0 if the strings are the same.
+
+    int Strncmp(const char *s1, const char *s2,int maxlen);
+    //It compares two strings only to n characters.
+
+    char* Strcat( char *destination, const char *source);
+    //It concatenates two strings and returns the concatenated string.
+//-----------------------incomplete----------------------//
  /*      strncat();//It concatenates n characters of one string to another string.
        strcpy();//It copies one string into another.
        strchr();//It copies the first n characters of one string into another.
