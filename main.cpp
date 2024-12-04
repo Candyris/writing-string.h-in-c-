@@ -22,6 +22,7 @@ int main(){
     std::cout<<candy::Strcmp(place1,place3)<<std::endl;
     std::cout<<candy::Strncmp(Name,fullName,8)<<std::endl;
     std::cout<<strncmp(Name,fullName,8)<<std::endl;
+    std::cout<<candy::Strstr("Hello","e")<<std::endl;
 
     
     return 0;
