@@ -18,11 +18,19 @@ namespace candy
 
     char *Strcat(char *destination, const char *source);
 
-    const char *Strstr(const char *source, const char* occurence);
+    const char *Strstr(const char *source, const char *occurence);
+
+    const char *Strcat(char *source, const char *concatenate, int len);
+    //It concatenates n characters of one string to another string.
+
+    const char* Strcpy(char* source, const char* destination);
+    //It copies one string into another.
+
+
+
     // It concatenates two strings and returns the concatenated string.
     //-----------------------incomplete----------------------//
-    /*      strncat();//It concatenates n characters of one string to another string.
-          strcpy();//It copies one string into another.
+    /*     
           strchr();//It copies the first n characters of one string into another.
           strrchr();//It finds out the first occurrence of a given character in a string.
           strnstr();//It finds out the first occurrence of a given string in a string.
@@ -97,7 +105,7 @@ char *candy::Strcat(char *destination, const char *source)
     // of destinction
 }
 
-const char *candy::Strstr(const char *source, const char* occurence)
+const char *candy::Strstr(const char *source, const char *occurence)
 {
     while (*source)
     {
@@ -117,4 +125,28 @@ const char *candy::Strstr(const char *source, const char* occurence)
         source++;
     }
     return nullptr;
+}
+
+const char *candy::Strcat(char *source, const char *concatenate, int len)
+{
+    source += Strlen(source);
+    while (len--)
+    {
+        *source = *concatenate;
+        source++;
+        concatenate++;
+    }
+    return source;
+}
+
+const char *candy::Strcpy(char *source, const char *destination)
+{
+    while(*destination != '\0')
+    {
+        *source = *destination;
+        source++;
+        destination++;
+    }
+    *source = '\0'; 
+    return source;
 }
